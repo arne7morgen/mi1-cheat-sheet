@@ -17,7 +17,9 @@ Inductive learning (Learning from observations)
 ## Perceptron (Connectionist Neurons)
 ### Basics
 Connectionist neurons can be modeled as a **linear filter**
+
 ![](images/Auswahl_2016-03-12_001.png)
+
 ![](images/Auswahl_2016-03-12_002.png)  
 
 Where the **input vector** $x$ can be any source of input, from feature sets to images encoded as vectors.  
