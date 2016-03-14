@@ -94,9 +94,40 @@ Think of the classical problem of over and underfitting.
 * left: average $E^T$, probably low $E^G$ $\to$ good predictor
 * right: small $E^T$, probably high $E^G$ $\to$ bad predictor
 
+### Gradient Methods
+
+We want to minimize $E^T$ which is a function of the weight vector **w**
+
+![](images/Auswahl_2016-03-14_006.png)
+
+So we basically need to know if we need to increase od decrease **w** such that $E^T$ goes down.
+
+![](images/Auswahl_2016-03-14_007.png)
+
+The Problem with this is, that **w** is commonly not a scalar value. We need to calculate every dimension of the feature space ($\alpha$) separately
+
+![](images/Auswahl_2016-03-14_008.png)
+
+The learning step $\eta$ is defined to be negative because the gradient points into the exact opposite direction.
+
+How can we calculate the gradient if we don't know $e^{\alpha}_{[w]}$ in advance?
+
+![](images/Auswahl_2016-03-14_009.png)
+
+By simply inserting $\partial y$ we can split up the fraction. The right side only depends on the model class. Hence, it is constant for the model evaluation and we can ignore it because the exact value is not of importance, only its direction.  
+On the left, we hopefully chose an error function that can be easily derived by $y$ (like the quadratic error function).
+
+![](images/Auswahl_2016-03-14_010.png)
+
+Therefore, for every error function, its derivative regarding $y$ needs to be provided in order to perform gradient descent.
+
+#### Problems
+Obviously there are the typical gradient descent problems.
+* choice of $\eta$ is critical for optimization to stop somewhere in time and for finding any good approximation of the optimal result.
+* For non convex error functions we may end up in local minima.
+
 ### Backpropagation
 
-### Gradient Methods
 
 ## Generalization
 
