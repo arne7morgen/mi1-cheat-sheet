@@ -114,7 +114,7 @@ How can we calculate the gradient if we don't know $e^{\alpha}_{[w]}$ in advance
 
 ![](images/Auswahl_2016-03-14_009.png)
 
-By simply inserting $\partial y$ we can split up the fraction. The right side only depends on the model class. Hence, it is constant for the model evaluation and we can ignore it because the exact value is not of importance, only its direction.  
+By simply inserting $\partial y$ we can split up the fraction. The right side only depends on the model class.
 On the left, we hopefully chose an error function that can be easily derived by $y$ (like the quadratic error function).
 
 ![](images/Auswahl_2016-03-14_010.png)
@@ -126,8 +126,15 @@ Obviously there are the typical gradient descent problems.
 * choice of $\eta$ is critical for optimization to stop somewhere in time and for finding any good approximation of the optimal result.
 * For non convex error functions we may end up in local minima.
 
-### Backpropagation
+**Big Problem**
+* Since we do not know what is happening in a neural network, how can we provide a derivative for error minimization? $\to$ Backpropagation
 
+### Backpropagation
+Backpropagation of errors is a computationally efficient method for calculating the derivatives of ![](images/Auswahl_2016-03-14_011.png)
+
+This will yield a update rule for the weight **w**
+
+![](images/Auswahl_2016-03-14_012.png)
 
 ## Generalization
 
