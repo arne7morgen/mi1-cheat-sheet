@@ -102,15 +102,65 @@ $a*4$
 ----------------
 Probablilistic Methods
 ==========================
-Bock: Arne
-
-keinen Bock:
-
-
 
 ## Uncertainty and Inference
+How do we model the/a world?
+### First order logic:
 
-## Bayes
+rules that can be used for deductive reasoning. But the first oder logic fails in many situations:
+* complete set of antecendents and consequences too large
+* no complete theory for domains
+* incomplete observations
+* stochastic enivironments
+
+### Degrees of Belief
+
+* $P(H): H \rightarrow [0,1] $  
+* $P(H) = 0$ H is false
+* $P(H) = 1$ H is true
+* $0<P(H)<1$ quantifies the **degrees of Belief**
+
+$P(H)$ obeys the laws of probability theory, but there is no justification via repeated observations and stochastic outcome.
+
+### Describing the world with Degrees of Belief
+#### Random Variables
+* *Random variable:* A part of the world whose status is initially unknown
+* *Domain of a random variable:* values the variable can take on
+
+**Examples:**
+* Boolean variables
+  * variable *cavity*; domain: {true, false}  
+* Discrete ordinal variables
+  * variable *weather*; domain: {Sunny, rainy, cloudy, snow}  
+* Continuous variables
+  + variable *temperature*; domain: $R_0^+$
+
+#### Atomic events
+A descriptio of the modeled worls is a complete set of the random variables. An **Atomic event** is a complete specification of the random variables that describe the world.
++ atomic events are mutually exclusive
++ set of atomic events must be exhaustive
+
+#### Prior
+The **prior** is a specification of the knowledge about the world, without any other information.
+
+**Example:**
++ $P(weather = sunny) = 0.3$
+
+#### Conditional probabilities
+The **conditional probabilities** specifies the knowledge of the world, given a set of obervations (evidence).
+![](images/bayesInf-01.png)
+![](images/bayesInf-02.png)
+
+$P(C|t)$: degree of belive in $C$ given *all* we knoe is $t$.
+
+#### Inference using Joint Probabilities
+
+### Conditional Independence
+
+### Bayes Theorem
+
+
+## Baysian Networks
 
 ### Graphs
 
